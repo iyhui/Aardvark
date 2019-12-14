@@ -1,3 +1,8 @@
+.navbar-brand{
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 32px;
+}
+
 html {
   position: relative;
   min-height: 100%;
