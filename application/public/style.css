@@ -3,6 +3,10 @@
   font-size: 32px;
 }
 
+.disclaimer{
+  text-align: center;
+}
+
 html {
   position: relative;
   min-height: 100%;
