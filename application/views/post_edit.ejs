@@ -9,8 +9,8 @@
     </div>
     <br />
     <div  style="margin: 4%;">
-      <h1>Create Post</h1>
-      <form class="center" method="POST" action="/post/edit/<%= itemId%>">
+      <h1>Edit Post</h1>
+      <form class="center" method="POST" action="/post/edit/<%= itemId%>" enctype="multipart/form-data">
         <div class="form-row">
           <div class="form-group col">
             <label for="productname">Item</label>
@@ -31,22 +31,12 @@
         <div class="form-group row">
           <div class="form-group col">
             <label for="category">Category</label>
-
- 
-            <select name="type" id="category" class="form-control" required>
-                <option selected="selected">Select an option</option>
-                <option value="texts" <% if(type="texts") { %>  > <% } %> Texts </option>
-                <option value="school supplies" <% if(type="school supplies") { %>  > <% } %> School Supplies </option>
-                <option value="home goods" <% if(type="home goods") { %>> <% } %> Home Goods </option>
-            </select>
+            <input name="type" type="text" class="form-control" id="type" value="<%= itemCategory %>" readonly/>
           </div>
         </div>
  
         <div class="form-group-col">
           <label for="item_description">Description</label>
-          <!-- <input type="text" class="form-control" id="item_description" placeholder="Description"> -->
- 
-        
           <textarea class="form-control" rows="5" id="description" name="description"><%= itemDescription %></textarea>
         </div>
  
@@ -64,9 +54,10 @@
     <div class="col-sm">
     </div>
   </div>
-        <!-- <div class="input-group">
+
+        <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload New Image</span>
           </div>
           <div class="custom-file">
             <input type="file" onchange="readURL(this);" name="itemImage" class="custom-file-input" id="itemImage"
@@ -85,10 +76,10 @@
               reader.readAsDataURL(input.files[0]);
             }
           }
-        </script> -->
+        </script> 
  
         <button type="submit" class="btn btn-primary" style="margin-top: 20px;">
-          Post
+          Edit
         </button>
       </form>
     </div>

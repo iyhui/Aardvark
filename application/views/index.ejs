@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include layout/header %>
-
 <body>
+<<<<<<< HEAD
     <div>
         <% include layout/navbar %>
     </div>
@@ -15,6 +15,30 @@
           </div>
 
     <!--Carousel-->
+=======
+<div>
+<% include layout/navbar %>
+</div>
+    <div class="container-fluid">
+        <div class="row">
+            <img src="/images/books.jpg" alt="books" id="bg">
+           <div class="centered">
+               <h1 class="hpfont-size">Welcome to Aardvark</h1>
+           </div>
+           <div class="top-right">
+              <h4 style="font-size:25px"><strong>*SFSU Software Engineering Project CSC 648-848, Fall 2019.  For Demonstration Only</strong></h4>
+            </div>
+        </div> 
+    </div>
+  
+
+<br>
+<br>
+<h1 style="text-align: center">Great Finds for All Students</h1>
+
+
+   <!--Carousel-->
+>>>>>>> 6f2fef2f0d43ea0fca9c4d9a43b54007888d8a6f
     <div id="carousel">
         <div class="container-fluid">
             <div class="row">
@@ -24,126 +48,53 @@
                             <div class="carousel-item active">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-12 col-lg-4">
-                                            <div class="card" style="width: 300px;margin: auto;">
-                                                <img src="https://via.placeholder.com/500" class="card-img-top">
+                                        <% for(let i=0; i < 3; i++) { %> 
+                                         <div class="col-sm-12 col-lg-4">
+                                            <div class="card ">
+                                                <img class="card-img-top" src="data:itemImage/jpg;base64,<%= itemImages[i] %>" alt="<%= items[i].name %>">
                                                 <div class="card-body">
-                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
-                                                    <p class="card-text">Skin masks help us to make are skin fresh and
-                                                        also
-                                                        they protect our skin from the harm rays of sun</p>
-                                                    <button type="button" class="btn btn-warning">Read More</button>
-
+                                                    <h4 class="card-title"><%= items[i].name %></h4>
+                                                    <p class="card-text"><%= items[i].description %></p>
+                                                   <a href="/searchResults/<%=items[i].id%>"> <button type="button" class="btn btn-warning">Read More</button></a>
                                                 </div>
-
                                             </div>
-
                                         </div>
-                                        <div class="col-sm-12 col-lg-4">
-                                            <div class="card" style="width: 300px;">
-                                                <img src="https://via.placeholder.com/500" class="card-img-top">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
-                                                    <p class="card-text">Skin masks help us to make are skin fresh and
-                                                        also
-                                                        they protect our skin from the harm rays of sun</p>
-                                                    <button type="button" class="btn btn-warning">Read More</button>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <div class="col-sm-12 col-lg-4">
-                                            <div class="card" style="width: 300px;">
-                                                <img src="https://via.placeholder.com/500" class="card-img-top">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
-                                                    <p class="card-text">Skin masks help us to make are skin fresh and
-                                                        also
-                                                        they protect our skin from the harm rays of sun</p>
-                                                    <button type="button" class="btn btn-warning">Read More</button>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
+ <% } %>
                                     </div>
-
                                 </div>
-
-
                             </div>
+
                             <div class="carousel-item">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-12 col-lg-4">
-                                            <div class="card" style="width: 300px;margin: auto;">
-                                                <img src="https://via.placeholder.com/500" class="card-img-top">
+                                        <% for(let i=4; i < items.length; i++) { %> 
+                                         <div class="col-sm-12 col-lg-4">
+                                            <div class="card">
+                                                <img class="card-img-top" src="data:itemImage/jpg;base64,<%= itemImages[i] %>" alt="<%= items[i].name %>">
                                                 <div class="card-body">
-                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
-                                                    <p class="card-text">Skin masks help us to make are skin fresh and
-                                                        also
-                                                        they protect our skin from the harm rays of sun</p>
-                                                    <button type="button" class="btn btn-warning">Read More</button>
-
+                                                    <h4 class="card-title"><%= items[i].name %></h4>
+                                                    <p class="card-text"><%= items[i].description %></p>
+                                                    <a href="/searchResults/<%=items[i].id%>"> <button type="button" class="btn btn-warning">Read More</button></a>
                                                 </div>
-
                                             </div>
-
                                         </div>
-                                        <div class="col-sm-12 col-lg-4">
-                                            <div class="card" style="width: 300px;">
-                                                <img src="https://via.placeholder.com/500" class="card-img-top">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
-                                                    <p class="card-text">Skin masks help us to make are skin fresh and
-                                                        also
-                                                        they protect our skin from the harm rays of sun</p>
-                                                    <button type="button" class="btn btn-warning">Read More</button>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <div class="col-sm-12 col-lg-4">
-                                            <div class="card" style="width: 300px;">
-                                                <img src="https://via.placeholder.com/500" class="card-img-top">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Why you should use skin masks ?</h4>
-                                                    <p class="card-text">Skin masks help us to make are skin fresh and
-                                                        also
-                                                        they protect our skin from the harm rays of sun</p>
-                                                    <button type="button" class="btn btn-warning">Read More</button>
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
+                                        <% } %>
                                     </div>
-
                                 </div>
-
-
                             </div>
-
                         </div>
 
                     </div>
+                    <a href="#inam" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    </a>
+                     <a href="#inam" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
 
                 </div>
 
-                <a href="#inam" class="carousel-control-prev" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a href="#inam" class="carousel-control-next" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
+                
 
             </div>
 
@@ -151,6 +102,15 @@
 
     </div>
 
+
+
+
+
+
+
+   
+
+  
     <!--Footer-->
     <% include layout/footer %>
 </body>

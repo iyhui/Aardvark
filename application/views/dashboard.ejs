@@ -16,9 +16,14 @@
         $("#myTab li:eq(0) a").tab('show'); // show 2nd tab on page load
       });
     </script>
+    <div class="container">
+     <div class="jumbotron">
+        <h4><strong>*SFSU Software Engineering Project CSC 648-848, Fall 2019.  For Demonstration Only</strong></h4>
+        </div>
+  </div>  
  
     <!--Seller dashboard-->
-    <div class="container-fluid" style="margin-top: 110px; margin-bottom: 70px;">
+    <div class="container">
     </div>
     <!--Sellers item and description-->
     <div class="center">
@@ -47,7 +52,14 @@
                     <a style="display:block; color: black;" href="/searchResults/<%= userItems[i].id %>">
                   <h5 class="mt-0 mb-1"><%= userItems[i].name %></h5></a>
                   <%= userItems[i].description %>
-                  <%= userItems[i].price %>
+                  <span style="float:right;">
+                    $<%= userItems[i].price %>.00
+                </span><br>
+                <% if (userItems[i].status === 1) {%>
+                  Status: Approved
+                  <% } else {%>
+                    Status: Unapproved
+                    <% } %>
                 </div>
                 <div class="col-sm-4" style="text-align: right; margin-top: 10px">
                     <a href="/post/edit/<%= userItems[i].id %>" class="btn btn-secondary btn-circle" data-toggle="tooltip" title="edit"><i

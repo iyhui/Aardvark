@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include layout/header %>
- 
 <body>
   <div>
     <div>
       <% include layout/navbar %>
     </div>
     <br />
-    <div  style="margin: 4%;">
+     <div class="container">
+     <div class="jumbotron">
+        <h4><strong>*SFSU Software Engineering Project CSC 648-848, Fall 2019.  For Demonstration Only</strong></h4>
+        </div>
+  </div> 
+<div class="container">
+    <div>
       <h1>Create Post</h1>
       <form class="center" method="POST" action="/post" enctype="multipart/form-data">
         <div class="form-row">
@@ -83,12 +88,16 @@
             }
           }
         </script>
- 
-        <button type="submit" class="btn btn-primary" style="margin-top: 20px;">
-          Post
-        </button>
+       
+        <div align="right">
+          <button type="submit" class="btn btn-warning" style="margin-top: 20px; margin-bottom: 10px;">Submit</button>
+        </div>
       </form>
+      <div align="right">
+         <b><i>*May take 24 hours for approval</i></b>
+      </div>
     </div>
+  </div>
   </div>
   <% include layout/footer %>
 </body>

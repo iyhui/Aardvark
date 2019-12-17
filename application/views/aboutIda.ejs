@@ -5,8 +5,10 @@
 <link rel="stylesheet" href="/about.css" />
 
 <body>
+    <div>
     <% include layout/navbar %>
-    <div class="entry">
+    </div>
+    <!-- <div class="entry">
         <img src="/images/ida.jpg" alt="Ida Hui image" class="align-left medium" />
         <hr class="style-one" style="margin-left: 300px;margin-right: 0px;" />
         <h3><b>Ida Hui</b></h3>
@@ -19,7 +21,30 @@
             When not boarding her next flight or taking pictures of her adventures, she's expanding her knowledge in web
             design/development, photography, and cuisines.<br>
         </p>
+    </div> -->
+
+<div class="container">
+  <div class="row justify-content-end" style="text-align: center">
+    <div class="col-6 align-self-center">
+      <h1>Team<br>
+      Lead</h1>
+      <hr>
     </div>
+    <div class="col-6">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/ida.jpg" alt="Ida Hui">
+                <div class="card-body">
+                    <p class="card-text">
+                      Ida Hui is completing her final year at SFSU in Computer Science.<br>
+                      Hui is an Oakland native, traveler, and content creator.<br><br>
+                      When not boarding her next flight or taking pictures of her adventures, she's expanding her knowledge in web
+                      design/development, photography, and cuisines.<br></p>
+               </div>
+        </div>   
+    </div>
+  </div>
+</div>
+
     <% include layout/footer %>
 </body>
 

@@ -1,77 +1,88 @@
 <!doctype html>
 <html lang="en">
+
 <% include layout/header %>
 
 <body>
-  <div>
-    <div>
-      <% include layout/navbar %>
-    </div>
-
-    <div style="margin-top: 200px"></div>
-
-    <div class="container" style="border-style:solid; border: 1px solid grey; border-radius: 10px ; width:500px">
-
-
-
-      <form class="center" method="POST" action="/auth/register" style="width:97%">
-
-
-        <h1 style="text-align:center; margin-top:20px; "> Create an Account </h1>
-
-        <!-- error messages if invalid input -->
-        <%if (typeof err != 'undefined') { %>
-          <div class="alert alert-danger" style="text-align:left">
-            <ul style="padding-left: 20px;">
-            <% err.forEach(function(error){ %>
-              <li><%= error.msg %></li>
-            <% }) %>
-            </ul>
-          </div>
-        <% } %>
-
-        <div class="container">
-
-          <div class="form-group col">
-            <label for="name">Username:</label>
-            <input name="name" class="form-control" id="name" value="<%= (typeof body != 'undefined' && typeof body.name != 'undefined') ? body.name : '' %>" placeholder="USERNAME">
-          </div>
-
-          <div class="form-group col">
-            <label for="email">Email:</label>
-            <input name="email" class="form-control" id="email" value="<%= (typeof body != 'undefined' && typeof body.email != 'undefined') ? body.email : '' %>" placeholder="EMAIL">
-          </div>
-
-          <div class="form-group col">
-            <label for="password">Password:</label>
-            <input type="password" name="password" class="form-control" id="password" value="<%= (typeof body != 'undefined' && typeof body.password != 'undefined') ? body.password : '' %>" placeholder="PASSWORD">
-          </div>
-
-          <div class="form-group col">
-            <label for="password2">Password:</label>
-            <input type="password" name="password2" class="form-control" id="password2" value="<%= (typeof body != 'undefined' && typeof body.password2 != 'undefined') ? body.password2 : '' %>" placeholder="CONFIRM PASSWORD">
-          </div>
-
-          <div class="form-group col">
-            <label for="phone">Phone Number:</label>
-            <input name="phone" class="form-control" id="phone" value="<%= (typeof body != 'undefined' && typeof body.phone != 'undefined') ? body.phone : '' %>" placeholder="415-111-2222">
-          </div>
-
-          <div class="form-group col">
-            <form action="/action_page.php">
-              <input type="checkbox" name="terms" value="1" > Accept Terms of Agreement<br>
-          </div>
-          
-          <div class="form-group col">
-            <p class="message"> Already have an account? <a href="/auth/login"> Login </a></p>
-            <button type="submit" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 10px;">Register</button>
-          </div>
+  <% include layout/navbar %>
+  <div class="container">
+     <div class="jumbotron">
+        <h4><strong>*SFSU Software Engineering Project CSC 648-848, Fall 2019.  For Demonstration Only</strong></h4>
         </div>
+  </div>     
+    
+  <div id="reg" ; class="container">
+    <form class="center" method="POST" action="/auth/register" style="width:97%">
 
-      </form>
-    </div>
+      <div class="form-group col">
+        <h1 style="text-align:center; margin-top:20px; "> Create an Account </h1>
+      </div>
+      
+      <!-- error messages if invalid input -->
+      <%if (typeof err != 'undefined') { %>
+      <div class="alert alert-danger" style="text-align:left">
+        <ul style="padding-left: 20px;">
+          <% err.forEach(function(error){ %>
+          <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+      </div>
+      <% } %>
+
+      <div class="form-group col">
+        <label for="name">Username:</label>
+        <input name="name" class="form-control" id="name"
+          value="<%= (typeof body != 'undefined' && typeof body.name != 'undefined') ? body.name : '' %>"
+          placeholder="USERNAME">
+      </div>
+
+      <div class="form-group col">
+        <label for="email">Email:</label>
+        <input name="email" class="form-control" id="email"
+          value="<%= (typeof body != 'undefined' && typeof body.email != 'undefined') ? body.email : '' %>"
+          placeholder="EMAIL">
+      </div>
+
+      <div class="form-group col">
+        <label for="password">Password:</label>
+        <input type="password" name="password" class="form-control" id="password"
+          value="<%= (typeof body != 'undefined' && typeof body.password != 'undefined') ? body.password : '' %>"
+          placeholder="PASSWORD">
+      </div>
+
+      <div class="form-group col">
+        <label for="password2">Password:</label>
+        <input type="password" name="password2" class="form-control" id="password2"
+          value="<%= (typeof body != 'undefined' && typeof body.password2 != 'undefined') ? body.password2 : '' %>"
+          placeholder="CONFIRM PASSWORD">
+      </div>
+
+      <div class="form-group col">
+        <label for="phone">Phone Number:</label>
+        <input name="phone" class="form-control" id="phone"
+          value="<%= (typeof body != 'undefined' && typeof body.phone != 'undefined') ? body.phone : '' %>"
+          placeholder="415-111-2222">
+      </div>
+
+      <div class="form-group col">
+        <form action="/action_page.php">
+          <input type="checkbox" name="terms" value="1"> Accept Terms of Agreement<br>
+      </div>
+
+      <div class="form-group col">
+        <p class="message"> Already have an account? <a href="/auth/login"> Login </a></p>
+      </div>
+
+      <div class="form-group col">
+        <div align="right">
+          <button type="submit" class="btn btn-warning" style="margin-top: 20px; margin-bottom: 10px;">Register</button>
+        </div>
+      </div>
+
+
+    </form>
+  
   </div>
   <% include layout/footer %>
 </body>
-
 </html>

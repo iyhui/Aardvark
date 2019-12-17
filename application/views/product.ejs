@@ -10,29 +10,15 @@
 
 <body>
     <% include layout/navbar %>
-    <div class="container-fluid">
+    <div class="container">
+         <div class="jumbotron">
+        <h4><strong>*SFSU Software Engineering Project CSC 648-848, Fall 2019.  For Demonstration Only</strong></h4>
+    </div>
         <div id="row-align" class="row justify-content-around">
-
-
             <div class="col-sm-4">
-
-
                 <img class="img-fluid" src="data:itemImage/jpg;base64,<%= img %>" alt="<%= item[0].name %>" />
-            </div>
-
-
-            <div class="col-sm-4 ">
-
-                <!-- TO ACCESS item ARRAY FROM BACKEND.  -->
-                <!-- <h1><%= item[0].name %></h1>
-                <h1><%= item[0].price %></h1>
-                <img src="data:itemImage/jpg;base64,<%= img %>" alt="<%= item[0].name %>" class="" style="width:60px;"/> -->
-                <!-- ONLY 1 OBJECT HENCE INDEX[0] -->
-
-
-
-                <!-- <div class=" ml-auto"><a href="#" class="btn btn-primary">Go somewhere</a></div> -->
-
+            </div>  
+                <div class="col-sm-4 ">
                 <div>
 
                     <h1><%= item[0].name %></h1>
@@ -40,10 +26,15 @@
                         <%= item[0].description %>
                     </p>
                     <h4>$<%= item[0].price %>.00</h4>
-
+                    <%if (!loggedin) { %>
+                        <button style="border-radius:0;" onclick="message(<%= item[0].id %>)" type="button"
+                            class="btn btn-warning">Contact Seller</button>
+                            <% } %>
+                        <%if (loggedin) {%>
+                        <%if (loggedin.id !== item[0].userId)  {%>
                     <button style="border-radius:0;" onclick="message(<%= item[0].id %>)" type="button"
                         class="btn btn-warning">Contact Seller</button>
-
+                        <% } %><% } %>
                 </div>
             </div>
             <% include layout/footer %>

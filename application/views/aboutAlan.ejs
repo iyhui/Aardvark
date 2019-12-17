@@ -5,24 +5,35 @@
 <link rel="stylesheet" href="/about.css" />
 
 <body>
+    <div>
     <% include layout/navbar %>
-    <div class="entry">
-        <img src="/images/alan.jpg" alt="Alan Nguyen" class="align-left medium" />
-        <hr class="style-one" />
-        <h3><b>Alan Nguyen</b></h3>
-        <h4><i>Front-End Lead</i></h4>
     </div>
-    <div id="about">
-        <p> My name is Alan Nguyen, I am currently a senior in the computer science program at <b>San Francisco State
+
+<div class="container">
+  <div class="row justify-content-end" style="text-align: center">
+        <div class="col-6 align-self-center">
+            <h1>Front-End<br>
+                Lead</h1>
+            <hr>
+        </div>
+    <div class="col-6">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/alan.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">My name is Alan Nguyen, I am currently a senior in the computer science program at <b>San Francisco State
                 University</b>. <br>
             <br>
             I enjoy building things that showcase my skills and that's why I have a loving passion for building
             websites.
             <br><br>
             My goal when I graduate is to get a job anywhere in the world<br>
-            where I can contribute to a team that aspires to be forward thinking and innovative.<br><br>
-        </p>
+            where I can contribute to a team that aspires to be forward thinking and innovative.<br><br></p>
+               </div>
+        </div>   
     </div>
+  </div>
+</div>
+
     <% include layout/footer %>
 </body>
 

@@ -22,15 +22,14 @@ const passportConfig = (passport) => {
                     
                     // user does not exist
                     if (!result || result == null || result.length !== 1) {
-                        console.log("Invalid Credentials")
-                        return done(null, false, { message: 'Invalid credentials.' });
+                        return done(null, false, { message: 'User does not exist.' });
                     }
 
                     // user exist, compare password
                     if (bcrypt.compareSync(password, result[0].password)){
                         return done(null, result[0]); // result[0] returns 1 user, result returns an array of 1 user
                     } else {
-                        return done(null, false, { message: 'Wrong password' });
+                        return done(null, false, { message: 'Wrong password.' });
                     }
 
                 }
@@ -39,10 +38,12 @@ const passportConfig = (passport) => {
         })
       );
 
+    // login
     passport.serializeUser(function(user, done) {
         done(null, user);
     });
 
+    // logout
     passport.deserializeUser(function(id, done) {
         done(null, id);
     });

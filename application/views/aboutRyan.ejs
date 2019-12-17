@@ -5,28 +5,38 @@
 <link rel="stylesheet" href="/about.css" />
 
 <body>
+    <div>
     <% include layout/navbar %>
-    <div class="entry">
-        <img src="/images/ryan.jpg" alt="Ryan Shu" class="align-left medium" />
-        <hr class="style-one" />
-        <h3><b>Ryan Shu</b></h3>
-        <h4><i>Github Master/Front-End Dev</i></h4>
     </div>
-    <div id="about">
-        <p> My name is Ryan Shu, I am currently a senior in the computer science program at <b>San Francisco State
-                University</b>. <br>
-            <br>
-            I love to work on full stack projects, where many different commponents come together to create one elegant
-            app.
-            My hobbies include <a href="https://www.flickr.com/photos/ryanshuzzz/">
+<div class="container">
+ <div class="row justify-content-end" style="text-align: center">
+    <div class="col-6 align-self-center">
+      <h1>Github<br>
+        Master</h1>
+      <hr>
+    </div>
+    <div class="col-6">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/ryan.jpg" alt="Ryan Shu">
+                <div class="card-body">
+                    <p class="card-text">
+                       My name is Ryan Shu, I am currently a senior in the computer science program at <b>San Francisco State
+                       University</b>. <br>
+                        <br>
+                       I love to work on full stack projects, where many different commponents come together to create one elegant
+                        app.
+                       My hobbies include <a href="https://www.flickr.com/photos/ryanshuzzz/">
                 <font color="black">photography</font>
-            </a>, working on my car, racing my car, and playing video games.
-            <br><br>
-            After I graduate, I would love to work in the field at any small to medium sized company working on
-            creating, maintaining and advancing projects.<br>
-            <br><br>
-        </p>
+                </a>, working on my car, racing my car, and playing video games.
+                <br><br>
+                After I graduate, I would love to work in the field at any small to medium sized company working on
+                creating, maintaining and advancing projects.<br>
+                <br><br></p>
+               </div>
+        </div>   
     </div>
+  </div>
+</div>
     <% include layout/footer %>
 </body>
 

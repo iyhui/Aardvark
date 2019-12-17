@@ -5,25 +5,37 @@
 <link rel="stylesheet" href="/about.css" />
 
 <body>
+    <div>
     <% include layout/navbar %>
-    <div class="entry">
-        <img src="/images/russell.jpg" alt="Russell Wong's image" class="align-left medium" />
-        <hr class="style-one" />
-        <h3><b>Russell Wong</b></h3>
-        <h4><i>Back-End Lead</i></h4>
     </div>
-    <div id="about">
-        <p> Hi everyone! <br><br>
-            My name is Russell and I am currently in my last semester at <i>San Francisco State University</i>,
-            majoring in Computer Science. <br><br>
-            Aside from school, I am currently doing a Software Engineering internship at OPSWAT, a cybersecurity
-            company based in San Francisco. I am in the Release Management & Testing team right now, which gives
-            me a different experience of working in the tech industry, because the previous Software Engineering
-            internship I had was more about Web Development.<br><br>
-            On top of that, I am also a barista at Peet's Coffee. It is tough juggling school and two jobs,
-            but I am a big fan of coffee and I enjoy working in the coffee-service industry.<br><br>
-        </p>
+
+    
+<div class="container">
+    <div class="row justify-content-end" style="text-align: center">
+        <div class="col-6 align-self-center">
+            <h1>Back-End<br>
+                Lead</h1>
+            <hr>
+        </div>
+    <div class="col-6">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/russell.jpg" alt="Russell Wong's image">
+                <div class="card-body">
+                    <p class="card-text">
+                        Hi everyone! <br><br>
+                        My name is Russell and I am currently in my last semester at <i>San Francisco State University</i>,
+                        majoring in Computer Science. <br><br>
+                        Aside from school, I am currently doing a Software Engineering internship at OPSWAT, a cybersecurity
+                        company based in San Francisco. I am in the Release Management & Testing team right now, which gives
+                        me a different experience of working in the tech industry, because the previous Software Engineering
+                        internship I had was more about Web Development.<br><br>
+                        On top of that, I am also a barista at Peet's Coffee. It is tough juggling school and two jobs,
+                        but I am a big fan of coffee and I enjoy working in the coffee-service industry.<br><br>
+               </div>
+        </div>   
     </div>
+  </div>
+</div>
     <% include layout/footer %>
 </body>
 

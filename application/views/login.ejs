@@ -1,47 +1,53 @@
 <!doctype html>
 <html lang="en">
+
 <% include layout/header %>
 
 <body>
-  <div>
-    <div>
-      <% include layout/navbar %>
-
-    </div>
-
-    <div style="margin-top: 200px"></div>
-
-    <div class="container" style="border-style:solid; border: 1px solid grey; border-radius: 10px; width:500px;">
-
-
-      <form class="center" method="POST" action="/auth/login" style="width:97%">
-        <h1 style="text-align:center; margin-top:20px; "> Sign In </h1>
-
-        <div class=" container">
-
-          <div class="form-group col">
-            <label for="email">Email:</label>
-            <input name="email" class="form-control" id="email" aria-describedby="emailHelp"
-              placeholder="EMAIL">
-          </div>
-
-          <div class="form-group col">
-            <label for="password">Password:</label>
-            <input type="password" name="password" class="form-control" id="password"
-              placeholder="PASSWORD">
-            <div>
-              <p class="message" style="margin-top:20px"> Forgot Password? <a href="#"> Reset </a></p>
-            </div>
-            <div>
-              <p class="message"> Don't have an account? <a href="/auth/register"> Register </a></p>
-              <button type="submit" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 10px;">Login</button>
-            </div>
-          </div>
-
+  <% include layout/navbar %>
+   <div class="container">
+     <div class="jumbotron">
+        <h4><strong>*SFSU Software Engineering Project CSC 648-848, Fall 2019.  For Demonstration Only</strong></h4>
         </div>
+  </div> 
+  <div id="log" class="container">
+    <form class="center" method="POST" action="/auth/login" style="width:97%">
 
-      </form>
-    </div>
+      <div class="form-group col">
+        <h1 style="text-align:center; margin-top:20px; "> Sign In </h1>
+      </div>
+
+
+      <!-- error flash messages if invalid input -->
+      <% if (typeof message != 'undefined' && message != '') { %>
+      <div class="alert alert-danger" style="text-align:left">
+        <ul style="padding-left: 20px;">
+          <%= message %>
+        </ul>
+      </div>
+      <% } %>
+
+      <div class="form-group col">
+        <label for="email">Email:</label>
+        <input name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="EMAIL">
+      </div>
+
+      <div class="form-group col">
+        <label for="password">Password:</label>
+        <input type="password" name="password" class="form-control" id="password" placeholder="PASSWORD">
+      </div>
+
+      <div class="form-group col">
+        <p class="message"> Don't have an account? <a href="/auth/register"> Register </a></p>
+      </div>
+
+      <div class="form-group col">
+        <div align="right">
+          <button type="submit" class="btn btn-warning" style="margin-top: 20px; margin-bottom: 10px;">Login</button>
+        </div>
+      </div>
+
+    </form>
   </div>
   <% include layout/footer %>
 </body>

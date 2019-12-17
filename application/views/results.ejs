@@ -6,12 +6,13 @@
     <div>
         <% include layout/navbar %>
     </div>
-    <br/>
 <div class="container">
      <div class="jumbotron">
+        <h4><strong>*SFSU Software Engineering Project CSC 648-848, Fall 2019.  For Demonstration Only</strong></h4>
+        <br/>
         <h4>THIS IS THE RESULTS PAGE</h4>
     </div>
-<div id="resultStyle">
+<div id="result-style">
 <div class="row">
     <% for(let i=0; i < searchResults.length; i++) { %> 
         <a style="display:block; color: black;" href="/searchResults/<%= searchResults[i].id %>">

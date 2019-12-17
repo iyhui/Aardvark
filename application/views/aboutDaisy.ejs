@@ -4,22 +4,32 @@
 <link rel="stylesheet" href="/about.css" />
 
 <body>
+  <div>
   <% include layout/navbar %>
   </div>
-  <div class="entry">
-    <img src="/images/daisy.jpg" alt="Daisy Sanchez" class="align-left medium" />
-    <hr class="style-one" />
-    <h3><b>Daisy Sanchez</b></h3>
-    <h4><i>Back-End Developer<i></h4>
+ 
+  <div class="container">
+  <div class="row justify-content-end" style="text-align: center">
+    <div class="col-6 align-self-center">
+      <h1>Back-End<br>
+      Developer</h1>
+      <hr>
+    </div>
+    <div class="col-6">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/daisy.jpg" alt="Daisy Sanchez">
+                <div class="card-body">
+                    <p class="card-text">
+                      My name is Daisy Sanchez and I am pursuing a bachelor in computer science at San Francisco State University.
+                      I have taken some courses in software development, programming methodology, theory of computing, operating system
+                      principles,
+                      and analysis of algorithms. From these course I learned to create simple programs in C, C++ and Java.</p>
+               </div>
+        </div>   
+    </div>
   </div>
-  <div id="about">
-    <p>
-      My name is Daisy Sanchez and I am pursuing a bachelor in computer science at San Francisco State University.
-      I have taken some courses in software development, programming methodology, theory of computing, operating system
-      principles,
-      and analysis of algorithms. From these course I learned to create simple programs in C, C++ and Java.
-    </p>
-  </div>
+</div>
+
   <% include layout/footer %>
 </body>
 

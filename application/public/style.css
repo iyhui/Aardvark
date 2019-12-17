@@ -10,6 +10,7 @@
 html {
   position: relative;
   min-height: 100%;
+
  
 }
 
@@ -22,10 +23,11 @@ html {
 body{
     margin-bottom: 60px;
     font-family: 'Quicksand' sans-serif;
+   
 }
 
 .carousel{
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .card-deck{
@@ -35,16 +37,20 @@ body{
   margin-left: 20px;
 
 }
-#resultStyle{
+.card-img-top{
+  height: 300px;
+}
+#result-style{
   margin-left:20px;
   margin-right:0;
 }
 
 #search{
-  width:800px;
+  width:500px;
   border-radius:4px;
-
+ 
 }
+
 .navbar{
   min-height: 80px;
 }
@@ -55,5 +61,69 @@ body{
 } 
 
 #row-align{
-  margin-top: 200px;
+  margin-top: 100px;
+}
+.jumbotron{
+  margin-top:35px;
+}
+
+#bg{
+  /* Full height */
+ 
+  width: 100%;
+  margin-top: 30px;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Half height */
+  height: 800px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centered {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.hpfont-size{
+  font-size: 100px;
+  font-family: Market Sans;
+}
+
+#home-cards{
+  margin-top: 30px;
+  text-align: center;
+
+}
+.top-right {
+  position: absolute;
+  top: 100px;
+  right: 16px;
+  color:white;
+
+}
+
+
+#log{
+  border-style:solid; 
+  border: 1px solid grey; 
+  border-radius: 10px ; 
+  width:500px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+#reg{
+  border-style:solid; 
+  border: 1px solid grey; 
+  border-radius: 10px ;
+  width:500px;
+  margin-bottom:100px;
+
 }

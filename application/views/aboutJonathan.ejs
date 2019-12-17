@@ -5,24 +5,37 @@
 <link rel="stylesheet" href="/about.css" />
 
 <body>
+  <div>
     <% include layout/navbar %>
-    <div class="entry">
-        <img src="/images/BigJon.jpg" alt="Jonathan Fontejon" class="align-left medium" />
-        <hr class="style-one" />
-        <h3><b>Jonathan Fontejon</b></h3>
-        <h4><i>Back-End Developer</i></h4>
+</div>
+  
+
+<div class="container">
+   <div class="row justify-content-end" style="text-align: center">
+    <div class="col-6 align-self-center">
+      <h1>Back-End<br>
+      Developer</h1>
+      <hr>
     </div>
-    <div id="about">
-        <p> My Name is Jonathan "BigJon" Cruz Fontejon and I am a transfer student at San Francisco State University.
-            <br>
-            My major is Computer Science (Web Development and Multimedia Design) and Minor in Asian American Studies
-            (AAS) <br><br>
-            I currently commute from Vallejo, CA to SFSU and previously worked at Six Flags and Walmart. <br><br>
-            Made successful game projects for CSC 413 and have Javascript (HTML, CSS, PHP) experience from 412. <br>
-            Occupations: Full-time CS student and fighting game player (MKXL, MK11, MvCi, DBFZ, BBTag, SFV:AE, USF4,
-            etc.) <br>
-        </p>
+    <div class="col-6">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/BigJon.jpg" alt="Jonathan Fontejon">
+                <div class="card-body">
+                    <p class="card-text">
+                      My Name is Jonathan "BigJon" Cruz Fontejon and I am a transfer student at San Francisco State University.
+                    <br>
+                     My major is Computer Science (Web Development and Multimedia Design) and Minor in Asian American Studies
+                    (AAS) <br><br>
+                    I currently commute from Vallejo, CA to SFSU and previously worked at Six Flags and Walmart. <br><br>
+                    Made successful game projects for CSC 413 and have Javascript (HTML, CSS, PHP) experience from 412. <br>
+                    Occupations: Full-time CS student and fighting game player (MKXL, MK11, MvCi, DBFZ, BBTag, SFV:AE, USF4,
+                    etc.) <br>
+               </div>
+        </div>   
     </div>
+  </div>
+</div>
+
     <% include layout/footer %>
 </body>
 

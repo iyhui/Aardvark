@@ -16,7 +16,8 @@ authRouter.get('/login', (req, res) => {
 	res.render("login",
 		{
 			page: 'login',
-			loggedin: req.user
+			loggedin: req.user,
+			message: req.flash('error'),
 		});
 });
 
@@ -27,7 +28,7 @@ authRouter.post('/login', (req, res, next) => {
 		// redirection after login
 		successRedirect: '/dashboard/',
 		failureRedirect: '/auth/login',
-		failureFlash: false,
+		failureFlash: true,
 	})(req, res, next);
 });
 
@@ -63,7 +64,7 @@ authRouter.post('/register', validateReg(), parser, (req, res) => {
 	}
 
 	const { name, email, password, password2, phone, terms } = req.body;
-	console.log(name + ' ' + email + ' ' + password + ' ' + password2 + ' ' + phone + ' ' + terms);
+	// console.log(name + ' ' + email + ' ' + password + ' ' + password2 + ' ' + phone + ' ' + terms);
 
 	const hash = bcrypt.hashSync(password, 10); // hash password
 

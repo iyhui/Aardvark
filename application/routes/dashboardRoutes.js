@@ -11,7 +11,7 @@ let parser = bodyparser.urlencoded({ extended: false });
 let app = express();
 app.use(parser);
  
-// get login page
+// get dashboard page
 dashboardRouter.get('/', loggedIn, (req, res) => {
  
     var imgblobs = [];
@@ -35,7 +35,7 @@ dashboardRouter.get('/', loggedIn, (req, res) => {
     let data = `select item.name as itemName, item.userId, message.mess_id, item_id, message.meeting_location, message.content, user.name, user.id from message join item on item.id = item_id join user on message.user_id = user.id where item_id IN (select id from item where user_Id = "${req.user.id}" or userId = "${req.user.id}")`;
  
     db.query(data, req.user.id, function (err, messages) {
-         console.log(messages);
+        //  console.log(messages);
         res.render('dashboard', {
  
             page: 'dashboard',
@@ -100,9 +100,10 @@ dashboardRouter.post('/item/:id', loggedIn, parser, (req, res) => {
 });
  
 dashboardRouter.get('/delete/:id', loggedIn, (req, res) => {
+    
     let q1 = `delete from resp where message_id = ${req.params.id}`;
     let q2 = `delete from message where mess_id = ${req.params.id}`;
-    console.log("IN DELETE MESSAGE " + req.params.id);
+    // console.log("IN DELETE MESSAGE " + req.params.id);
     
     db.query(q1, function(err, result) {
  
@@ -110,9 +111,6 @@ dashboardRouter.get('/delete/:id', loggedIn, (req, res) => {
             res.redirect('/dashboard');
         })
     });
- 
-    
- 
  
 });
  
