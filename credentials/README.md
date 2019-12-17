@@ -7,7 +7,7 @@
 
 # Blow is a list of items required. Missing items will causes points to be deducted from multiple milestone submissions.
 
-1. Server URL or IP: 3.19.255.197
+1. Server URL or IP: 3.136.156.1
 2. SSH username: 
 3. SSH password or key.
     <br> If a ssh key is used please upload the key to the credentials folder.
@@ -22,4 +22,4 @@
 
 1. Go to the directory where your key is stored
 2. chmod 400 BuySell.pem
-3. ssh -i "BuySell.pem" ubuntu@ec2-3-19-255-197.us-east-2.compute.amazonaws.com
+3. ssh -i "BuySell.pem" ubuntu@ec2-3-136-156-1.us-east-2.compute.amazonaws.com
