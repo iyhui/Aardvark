@@ -14,7 +14,7 @@ You are free to organize the contents of the folder as you see fit. But remember
 
 - [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/) For GUI [MySQL Workbench](https://dev.mysql.com/doc/workbench/en/)
 
-### Instructions to Deploy
+### Instructions to Run
 1. Clone this repository
 ```
 git clone 
@@ -23,14 +23,11 @@ git clone
 ```
 cd csc648-fall2019-Team01/application
 ```
-3. Initialize the server
+3. Initialize the server (may need root user permissions)
 ```
-npm install
+npm i
 ```
-4. Start the server
+4. Start the server (may need root user permissions)
 ```
 npm start
 ```
-
-## Note
-Currently MySQL is set to connect to root@localhost. See model/db.js.
