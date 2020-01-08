@@ -2,7 +2,7 @@ const mysql = require('mysql');
 
 // create connection to remote database hosted in ec2 instance
 const db = mysql.createConnection({
-    host: '3.136.156.1',
+    host: '3.19.30.6',
     user: 'team01',
     password: 'password',
     database: 'aardvark_db'
